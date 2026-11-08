@@ -5,13 +5,13 @@
     "@anomalous3"
   ],
   "config_flow": true,
-  "documentation": "https://github.com/anomalous3/sublunary",
+  "documentation": "https://github.com/anomalous3/sublunary-ha",
   "integration_type": "service",
   "iot_class": "calculated",
-  "issue_tracker": "https://github.com/anomalous3/sublunary/issues",
+  "issue_tracker": "https://github.com/anomalous3/sublunary-ha/issues",
   "requirements": [
     "skyfield>=1.49"
   ],
   "single_config_entry": true,
-  "version": "0.4.1"
+  "version": "0.5.0"
 }

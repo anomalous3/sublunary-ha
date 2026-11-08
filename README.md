@@ -1,6 +1,6 @@
 <img src="brand/icon@2x.png" alt="" width="128" align="right">
 
-# Sublunary
+# Sublunary for Home Assistant
 
 *The realm of change beneath the Moon, rendered in light.*
 
@@ -9,19 +9,11 @@ sensors (sign, phase, applying aspects, void-of-course) so automations can
 drive lights from it. It's an art project: the astrology is taken seriously as
 a system of definitions, and none of it is claimed as a mechanism.
 
-**[Watch a lunar month on the Sublunary Astrolabe →](https://sublunary.app/astrolabe.html)**
-Lilly's orbs on a zodiac wheel, and what one bulb does with them. Its companion,
-**[Sublunary Houses](https://sublunary.app/houses.html)**, shows the sign and natal-house colors, with your own chart computed in the browser.
-And **[Lilly's Orbs on the Sphere](https://sublunary.app/sphere.html)**: a year of the Moon
-threading Lilly's orbs on the actual sky rather than flattened onto the ecliptic.
-And **[The Sublunary Sphere](https://sublunary.app/sublunary-sphere.html)**: the same sky in 3D, with
-the Moon's tilted orbit, its nodes Rahu and Ketu, and every orb as a cap of light.
-
-And two pieces for your own chart, computed in your browser so your birth data stays with you:
-**[Synastry Chords](https://sublunary.app/synastry.html)** plays two charts as one chord, and
-**[Sublunary: Cantata](https://sublunary.app/)** is a work in six movements: *Chart*, your birth chart read at three depths, with William Lilly's dignities, combustion and receptions; *Now*, a forecast
-of what begins and ends this week; *Moon*, her laps stacked like a seismograph's drum, from two years down to the hour; *Score*, your transits as a piano roll; *Fold*, every planet as a line through time
-with the zodiac folded so aspects become crossings; and *Two*, what passes between two charts and what the sky does to each.
+It's part of [Sublunary](https://sublunary.app/), whose other pieces live in the
+[main repository](https://github.com/anomalous3/sublunary): **[Sublunary: Cantata](https://sublunary.app/)**,
+a birth chart and its transits as a work in six movements, and the
+**[Astrolabe](https://sublunary.app/astrolabe.html)**, which shows a lunar month of
+Lilly's orbs and what one bulb does with them.
 
 Void of course is famously contested, so Sublunary computes several
 definitions side by side, and the disagreement between them is itself
@@ -29,7 +21,7 @@ something you can display.
 
 ## Install (HACS)
 
-1. HACS → ⋮ → **Custom repositories** → add `https://github.com/anomalous3/sublunary`, type **Integration**.
+1. HACS → ⋮ → **Custom repositories** → add `https://github.com/anomalous3/sublunary-ha`, type **Integration**.
 2. Install **Sublunary**, restart Home Assistant.
 3. Settings → Devices & services → **Add integration** → Sublunary.
 4. Every void-of-course definition has its own binary sensor. `lilly_unbounded`
@@ -163,8 +155,9 @@ uv venv .venv-ha && uv pip install pytest-homeassistant-custom-component skyfiel
 ```
 
 The engine lives in `sublunary/` and is vendored into
-`custom_components/sublunary/engine/` by `scripts/vendor_engine.sh`. A test
-fails if the two drift apart.
+`custom_components/sublunary/engine/` by `scripts/vendor_engine.sh`. It's shared
+with the [main Sublunary repository](https://github.com/anomalous3/sublunary),
+which holds the engine's home copy along with the web pieces.
 
 ## License
 
